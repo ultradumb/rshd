@@ -1,8 +1,8 @@
-OBJS = rshd.o rshd_rcp.o Service.o doexec.o
+OBJS = rshd.o rshd_rcp.o Service.o doexec.o resource.o
 LIBS = -ladvapi32 -luser32 -lws2_32 
 # was: -lwsock32
-CPPFLAGS=-g  -ggdb -fno-inline -fno-omit-frame-pointer
-CFLAGS=-g
+CPPFLAGS=-O  -ggdb -fno-inline -fno-omit-frame-pointer
+CFLAGS=-O
 
 .cpp.o:
 	g++ $(CPPFLAGS) -c -DGAPING_SECURITY_HOLE $<
@@ -18,5 +18,9 @@ clean:
 rshd.exe: $(OBJS) Makefile
 	g++ $(CPPFLAGS) -o rshd.exe $(OBJS) $(LIBS)
 #	link /nologo /subsystem:console $(OBJS) $(LIBS)
+
+resource.o:	resource.rc
+	windres resource.rc -o resource.o
+
 
 # EOF
