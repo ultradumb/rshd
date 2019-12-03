@@ -71,4 +71,4 @@ exists, everything is fine on next connection. Cannot figure out what may be
 primary cause of it - apparently some handles / descriptors are not being
 closed. Must be related to some slot limits in C library. Maximum of 2048 thread
 descriptors comes to mind, as I create 4 threads per client (including stderr
-pipe thread). Maxtsdio got nothing to do with it - tried.
+pipe thread). Maxstdio got nothing to do with it - tried.
