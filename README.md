@@ -1,4 +1,8 @@
-This is RSH daemon for Windows (yet another attempt)
+# This is RSH daemon for Windows (yet another attempt)
+
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)]
+
+> An rshd (Unix RSH daemon) for Windows with true STDIO redirection.
 
 Initial code was taken from https://sourceforge.net/projects/rshd/
 
@@ -21,7 +25,7 @@ Makefile. I got no Microsoft development tools and not planning to use any.
 
 ============================================================
 
-Why change?
+# Why change?
 
 Initial rshd version used system() with redirection to files, then dumped
 results to stdout, therefore unable to run interactive console programs. This
@@ -36,7 +40,7 @@ intact should you need this. Cannot say if this can be solved simply with
 bat/cmd files, but, apparently, stdio redirection does not work well when using
 CreateProcess() to run batch files.
 
-Notes.
+# Notes.
 
 There is a somewhat ugly mapcommand() routine which I did for my own purpose. It
 should not affect anything as it is now.
@@ -60,7 +64,7 @@ tree as original-readme.htm).
 Enjoy.
 
 
-TODO:
+# TODO:
 
 holler() function in doexec.cpp should be replaced with something more sane. For
 now just changed to proper varargs.
