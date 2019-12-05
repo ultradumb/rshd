@@ -17,13 +17,11 @@ Mostly changes to rshd.c - user / host authorization processing in single sub.
 Took doexec.c and modified it to accommodate for separate stderr processing (by
 creating 3rd reader thread) + removed CRLF processing on stdout.
 
-============================================================
 
-Compiles almost clean and builds OK with "gcc version 8.3.0 (x86_64-posix-seh,
+>Compiles almost clean and builds OK with "gcc version 8.3.0 (x86_64-posix-seh,
 Built by strawberryperl.com project", Target: x86_64-w64-mingw32 using supplied
 Makefile. I got no Microsoft development tools and not planning to use any.
 
-============================================================
 
 # Why change?
 
