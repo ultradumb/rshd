@@ -19,7 +19,7 @@
 #endif
 
 
-#define BUFFER_SIZE 200
+#define BUFFER_SIZE 4096
 
 //
 // Structure used to describe each session
