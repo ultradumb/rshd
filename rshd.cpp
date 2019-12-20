@@ -605,7 +605,7 @@ int
         4, PF_INET);
     if(!remoteHostPtr)
     {
-        error("Cannot determine remote host credentials!\n");
+        fprintf(stderr, "[%d] Cannot determine remote host credentials!\n", client);
         return securityFlag;
     }
 //    if(debugFlag)
