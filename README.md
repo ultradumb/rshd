@@ -28,7 +28,7 @@ Makefile. I got no Microsoft development tools and not planning to use any.
 Initial rshd version used system() with redirection to files, then dumped
 results to stdout, therefore unable to run interactive console programs. This
 version redirects stdin / stdout and stderr (if port is supplied by client -
-standard Windows rsh.exe does NOT do it) to cient sockets using Windows pipes.
+standard Windows rsh.exe does NOT do it) to client sockets using Windows pipes.
 When using with interactive programs - do not forget to set autoflush in the
 program that runs using rshd (for perl scripts, do '$|=1;').
 
