@@ -587,6 +587,12 @@ int
         error("Cannot determine client's IP address!", 0);
         return securityFlag;
     }
+		// set environment variable to recognize client later
+		char putenv_buf[1024];
+		sprintf (putenv_buf, "RSHCLIENT=%s", inet_ntoa(cliaddr.sin_addr));
+		if (debugFlag) fprintf(stderr, "[%d] Environment %s\n", client, putenv_buf);
+		_putenv (putenv_buf);
+
     // make sure the client port is within the reserved  range 
     cliaddr.sin_port=ntohs(cliaddr.sin_port);
     if(debugFlag)
